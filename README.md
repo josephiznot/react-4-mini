@@ -19,7 +19,7 @@ In this project, we will create a very basic React application from scratch that
 
 ## Step 1
 
-### Summary 
+### Summary
 
 In this step, we will create three basic components that will be used later for three separate routes.
 
@@ -36,14 +36,10 @@ In this step, we will create three basic components that will be used later for 
 <summary> <code> src/Route1.js </code> </summary>
 
 ```js
-import React from 'react';
+import React from "react";
 
 export default function Route1() {
-  return (
-    <div>
-      Route 1 here!
-    </div>
-  )
+  return <div>Route 1 here!</div>;
 }
 ```
 
@@ -54,14 +50,10 @@ export default function Route1() {
 <summary> <code> src/Route2.js </code> </summary>
 
 ```js
-import React from 'react';
+import React from "react";
 
 export default function Route2() {
-  return (
-    <div>
-      Route 2 here!
-    </div>
-  )
+  return <div>Route 2 here!</div>;
 }
 ```
 
@@ -72,14 +64,10 @@ export default function Route2() {
 <summary> <code> src/Route3.js </code> </summary>
 
 ```js
-import React from 'react';
+import React from "react";
 
 export default function Route3() {
-  return (
-    <div>
-      Route 3 here!
-    </div>
-  )
+  return <div>Route 3 here!</div>;
 }
 ```
 
@@ -122,21 +110,21 @@ In this step, we will configure routes using a `routes.js` file.
 <summary> <code> src/routes.js </code> </summary>
 
 ```js
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
 // Components
-import Route1 from './Route1';
-import Route2 from './Route2';
-import Route3 from './Route3';
+import Route1 from "./Route1";
+import Route2 from "./Route2";
+import Route3 from "./Route3";
 
 export default (
   <Switch>
-    <Route exact path="/" component={ Route1 } />
-    <Route path="/2" component={ Route2 } />
-    <Route path="/3" component={ Route3 } />
+    <Route exact path="/" component={Route1} />
+    <Route path="/2" component={Route2} />
+    <Route path="/3" component={Route3} />
   </Switch>
-)
+);
 ```
 
 </details>
@@ -160,11 +148,11 @@ In this step, we'll render the `routes` inside the main `src/App.js` component.
 <summary> <code> src/App.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-import routes from './routes';
+import routes from "./routes";
 
 class App extends Component {
   render() {
@@ -178,7 +166,7 @@ class App extends Component {
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
 
-        { routes }
+        {routes}
       </div>
     );
   }
@@ -208,20 +196,21 @@ In this step, we'll configure our React application to handle routing.
 <summary> <code> src/index.js </code> </summary>
 
 ```js
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import registerServiceWorker from './registerServiceWorker';
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import registerServiceWorker from "./registerServiceWorker";
 
 // Routing
-import { HashRouter } from 'react-router-dom';
+import { HashRouter } from "react-router-dom";
 
 ReactDOM.render(
   <HashRouter>
     <App />
-  </HashRouter>
-, document.getElementById('root'));
+  </HashRouter>,
+  document.getElementById("root")
+);
 
 registerServiceWorker();
 ```
@@ -230,7 +219,7 @@ registerServiceWorker();
 
 ## Step 6
 
-### Summary 
+### Summary
 
 In this step, we'll provide a way for a user to navigate between the routes. Using `react-router-dom`, this is done by using the `<Link></Link>` component.
 
@@ -247,12 +236,12 @@ In this step, we'll provide a way for a user to navigate between the routes. Usi
 <summary> <code> src/App.js </code> </summary>
 
 ```js
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import logo from "./logo.svg";
+import "./App.css";
 
-import routes from './routes';
-import { Link } from 'react-router-dom';
+import routes from "./routes";
+import { Link } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -277,8 +266,8 @@ class App extends Component {
         <Link to="/3">
           <p>Route 3</p>
         </Link>
-        
-        { routes }
+
+        {routes}
       </div>
     );
   }
@@ -292,7 +281,6 @@ export default App;
 <br />
 
 <img src="https://github.com/DevMountain/react-4-mini/blob/solution/readme-assets/2g.gif" />
-
 
 ## Contributions
 
